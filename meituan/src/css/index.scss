@@ -2,7 +2,9 @@
 @import "_minix.scss";
 .wrapper {
     width: 100%;
-    overflow: auto;
+    height: 100%;
+    @include box_flex;
+    flex-direction: column;
 }
 
 .header {
@@ -52,4 +54,64 @@
         height: 100%;
         font-size: pxTorem(12px);
     }
+}
+
+.banner {
+    width: 100%;
+    height: pxTorem(121px);
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.betterbox {
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+.contener {
+    width: 100%;
+    height: pxTorem(131px);
+    background: white;
+    margin-bottom: 1px;
+}
+
+.swiper-wrapper,
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include justify(space-around);
+    flex-wrap: wrap;
+    dl {
+        margin: pxTorem(5px) pxTorem(15px);
+        text-align: center;
+    }
+    dd {
+        width: pxTorem(40px);
+        height: pxTorem(40px);
+        border-radius: 50%;
+        background: pink;
+        line-height: pxTorem(40px);
+        i {
+            font-size: pxTorem(25px);
+        }
+    }
+}
+
+.page {
+    margin-top: pxTorem(37px);
+}
+
+.page .swiper-pagination-bullet {
+    width: pxTorem(7px);
+    height: pxTorem(7px);
 }

@@ -185,7 +185,12 @@ html {
 
 .wrapper {
   width: 100%;
-  overflow: auto;
+  height: 100%;
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  flex-direction: column;
 }
 
 .header {
@@ -248,4 +253,72 @@ html {
   flex: 1;
   height: 100%;
   font-size: 0.32rem;
+}
+
+.banner {
+  width: 100%;
+  height: 3.22667rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.betterbox {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.contener {
+  width: 100%;
+  height: 3.49333rem;
+  background: white;
+  margin-bottom: 1px;
+}
+
+.swiper-wrapper,
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.swiper-slide dl {
+  margin: 0.13333rem 0.4rem;
+  text-align: center;
+}
+
+.swiper-slide dd {
+  width: 1.06667rem;
+  height: 1.06667rem;
+  border-radius: 50%;
+  background: pink;
+  line-height: 1.06667rem;
+}
+
+.swiper-slide dd i {
+  font-size: 0.66667rem;
+}
+
+.page {
+  margin-top: 0.98667rem;
+}
+
+.page .swiper-pagination-bullet {
+  width: 0.18667rem;
+  height: 0.18667rem;
 }
