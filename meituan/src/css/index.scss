@@ -1,0 +1,55 @@
+@import "common.scss";
+@import "_minix.scss";
+.wrapper {
+    width: 100%;
+    overflow: auto;
+}
+
+.header {
+    width: 100%;
+    height: pxTorem(50px);
+    color: #fff;
+    background: #06c1ae;
+    border-bottom: 1px solid #21897d;
+    @include box_flex;
+    @include justify(space-around);
+    @include align;
+    dl {
+        text-align: center;
+        width: pxTorem(50px);
+        font-size: pxTorem(10px);
+        i {
+            font-size: pxTorem(25px);
+        }
+    }
+}
+
+.local {
+    display: inline-block;
+    text-align: center;
+    font-size: pxTorem(15px);
+    width: pxTorem(60px);
+    i {
+        font-size: pxTorem(14px);
+    }
+}
+
+.search {
+    width: pxTorem(257px);
+    border-radius: pxTorem(3px);
+    background: rgba(0, 0, 0, .15);
+    height: pxTorem(32px);
+    line-height: pxTorem(32px);
+    @include box_flex;
+    i {
+        text-align: center;
+        width: pxTorem(30px);
+        font-size: pxTorem(15px);
+    }
+    span {
+        color: #68dbce;
+        flex: 1;
+        height: 100%;
+        font-size: pxTorem(12px);
+    }
+}
